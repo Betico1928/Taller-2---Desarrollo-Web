@@ -6,11 +6,23 @@
 <div *ngIf="user">
   <!-- Muestra la información del usuario -->
   <h2>Datos del usuario</h2>
+  <p><strong>ID:</strong> {{ user.id }}</p>
   <p><strong>Nombre:</strong> {{ user.firstName }} {{ user.lastName }}</p>
+  <p><strong>Nombre de soltera/o:</strong> {{ user.maidenName }}</p>
+  <p><strong>Edad:</strong> {{ user.age }}</p>
+  <p><strong>Género:</strong> {{ user.gender }}</p>
   <p><strong>Email:</strong> {{ user.email }}</p>
-  <p><strong>Username:</strong> {{ user.username }}</p>
-  <!-- Agrega más campos según lo que desees mostrar -->
+  <p><strong>Teléfono:</strong> {{ user.phone }}</p>
+  <p><strong>Nombre de usuario:</strong> {{ user.username }}</p>
+  <p><strong>Contraseña:</strong> {{ user.password }}</p> <!-- Aunque quizás no quieras mostrar esto por cuestiones de seguridad -->
+  <p><strong>Fecha de nacimiento:</strong> {{ user.birthDate }}</p>
+  <p><strong>Imagen:</strong> <img [src]="user.image" alt="Imagen de usuario"></p>
+  <p><strong>Tipo de sangre:</strong> {{ user.bloodGroup }}</p>
+  <p><strong>Altura:</strong> {{ user.height }} cm</p>
+  <p><strong>Peso:</strong> {{ user.weight }} kg</p>
+  <p><strong>Color de ojos:</strong> {{ user.eyeColor }}</p>
 </div>
+
 
 <div *ngIf="error">
   <p style="color: red;">{{ error }}</p>
