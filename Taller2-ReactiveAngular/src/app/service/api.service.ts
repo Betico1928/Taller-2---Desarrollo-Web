@@ -17,13 +17,9 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
-  getAllUsers(): Observable<Users[]>
+  searchUserByUsername(username: string): Observable<any>
   {
-    return this.http.get<{ users: Users[] }>(`${this.baseUrl}/users`).pipe(map(response => response.users));
+    return this.http.get<any>(`${this.baseUrl}/users/filter?key=username&value=${username}`);
   }
 
-  getUserByUsername(username: string): Observable<Users[]>
-  {
-    return this.http.get<any>(`${this.baseUrl}/users/filter?key=username&value=${username}`).pipe(map(response => response.users));
-  }
 }

@@ -8,29 +8,26 @@ import { Users } from "../../model/users";
   styleUrls: ['./user-search.component.css']
 })
 
-export class UserSearchComponent
-{
+export class UserSearchComponent {
+
+  username: string = '';
   user: Users | null = null;
-  error: string | null = null;
+  error: string = '';
+
 
   constructor(private apiService: ApiService) { }
 
-
-  searchUser(username: string): void
-  {
-    this.apiService.getUserByUsername(username).subscribe((users: Users[]) => {
-
-      if (users.length > 0)
-      {
-        this.user = users[0];
-        this.error = null;
-      } else {
-        this.user = null;
-        this.error = 'Usuario no encontrado';
-      }
+  searchUserByUsername() {
+    this.apiService.searchUserByUsername(this.username).subscribe(
+      data => {
+        if (data.users && data.users.length > 0) {
+          this.user = data.users[0];
+        } else {
+          this.error = 'Usuario no encontrado';
+        }
       },
       err => {
-        this.error = 'Hubo un error al buscar el usuario. Por favor, inténtalo nuevamente.';
+        this.error = 'Hubo un error en la búsqueda';
       }
     );
   }
