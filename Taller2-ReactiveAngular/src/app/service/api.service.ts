@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import {map, Observable} from 'rxjs';
 import { tap } from 'rxjs/operators';
 
 
@@ -19,6 +19,11 @@ export class ApiService {
 
   getAllUsers(): Observable<Users[]>
   {
-    return this.http.get<Users[]>(`${this.baseUrl}/users`).pipe(tap(users => console.log(users)));
+    return this.http.get<{ users: Users[] }>(`${this.baseUrl}/users`).pipe(map(response => response.users));
+  }
+
+  getUserByUsername(username: string): Observable<Users[]>
+  {
+    return this.http.get<any>(`${this.baseUrl}/users/filter?key=username&value=${username}`).pipe(map(response => response.users));
   }
 }

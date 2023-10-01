@@ -1,1 +1,17 @@
-<p>user-search works!</p>
+<!-- Barra de Búsqueda -->
+<form (submit)="searchUser(username.value)">
+  <input type="text" #username placeholder="Introduce el nombre de usuario">
+  <button type="submit">Buscar</button>
+</form>
+
+<!-- Mostrar información del usuario si existe -->
+<div *ngIf="user">
+  <img [src]="user.image" alt="Imagen de usuario">
+  <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+  <p>Email: {{ user.email }}</p>
+  <p>Username: {{ user.username }}</p>
+  <!-- Puedes agregar más campos si lo deseas -->
+</div>
+
+<!-- Mensaje de error si el usuario no existe -->
+<p *ngIf="error">{{ error }}</p>
