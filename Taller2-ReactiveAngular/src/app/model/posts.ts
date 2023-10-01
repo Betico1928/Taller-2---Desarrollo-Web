@@ -1,3 +1,5 @@
+import {Comments} from "./comments";
+
 export interface Posts
 {
   id: number;
@@ -5,5 +7,5 @@ export interface Posts
   body: string;
   userId: number;
   tags: string[];
-  reactions: string[];
+  reactions: Comments[];
 }
