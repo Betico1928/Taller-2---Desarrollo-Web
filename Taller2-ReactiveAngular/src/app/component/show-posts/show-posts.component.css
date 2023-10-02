@@ -42,3 +42,15 @@
 .comment-body {
   color: #555;
 }
+
+.reactions {
+  font-size: 16px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.reactions::before {
+  content: "❤️"; /* ícono de corazón */
+  margin-right: 5px;
+}
