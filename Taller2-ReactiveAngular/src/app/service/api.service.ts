@@ -22,4 +22,12 @@ export class ApiService {
     return this.http.get<any>(`${this.baseUrl}/users/filter?key=username&value=${username}`);
   }
 
+  getPostsByUserId(userId: number) {
+    return this.http.get<{ posts: Posts[] }>(`https://dummyjson.com/posts/user/${userId}`);
+  }
+
+  getCommentsByPostId(postId: number) {
+    return this.http.get<{ comments: Comments[] }>(`https://dummyjson.com/comments/post/${postId}`);
+  }
+
 }

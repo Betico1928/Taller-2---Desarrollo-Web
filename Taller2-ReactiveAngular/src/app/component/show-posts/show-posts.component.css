@@ -1,0 +1,22 @@
+/* Estilo para cada comentario */
+.comment-box {
+  background-color: #f5f5f5; /* Color de fondo claro para cada comentario */
+  border: 1px solid #e0e0e0; /* Borde suave alrededor del comentario */
+  padding: 15px; /* Espacio interno para el contenido del comentario */
+  margin-bottom: 10px; /* Espacio entre comentarios */
+  border-radius: 5px; /* Esquinas redondeadas para el comentario */
+}
+
+/* Estilo para el nombre del usuario del comentario */
+.comment-username {
+  font-weight: bold; /* Hacer el nombre de usuario en negrita */
+  color: #E57373; /* Color rojo que hemos utilizado anteriormente */
+  margin-bottom: 5px; /* Espacio entre el nombre de usuario y el cuerpo del comentario */
+}
+
+/* Estilo para el cuerpo del comentario */
+.comment-body {
+  font-size: 0.95rem; /* Tamaño de letra un poco más pequeño para el cuerpo del comentario */
+  color: #555; /* Color de letra oscuro pero no completamente negro */
+}
+

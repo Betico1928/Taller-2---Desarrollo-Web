@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { UserSearchComponent } from './component/user-search/user-search.component';
 import {FormsModule} from "@angular/forms";
+import { ShowPostsComponent } from './component/show-posts/show-posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserSearchComponent
+    UserSearchComponent,
+    ShowPostsComponent
   ],
   imports: [
     BrowserModule,

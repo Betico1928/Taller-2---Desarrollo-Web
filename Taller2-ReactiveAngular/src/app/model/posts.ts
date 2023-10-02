@@ -7,5 +7,6 @@ export interface Posts
   body: string;
   userId: number;
   tags: string[];
-  reactions: Comments[];
+  reactions: number;
+  comments?: Comments[];
 }
