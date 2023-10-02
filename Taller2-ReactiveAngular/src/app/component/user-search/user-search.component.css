@@ -1,3 +1,60 @@
-div {
-  margin: 10px 0;
+/* Adaptando tus estilos */
+.user-section {
+  padding: 50px 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  margin: 100px auto;
+  max-width: 1100px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
+
+.user-container {
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 70%;
+}
+
+.btn-search {
+  background-color: rgb(220, 0, 77);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn-search:hover {
+  background-color: #b3005b;
+}
+
+.user-image img {
+  width: 250px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.user-info {
+  /* Aquí puedes adaptar los estilos de la tabla de la mascota */
+}
+
+/* ... otros estilos que se adapten a tus necesidades ... */
