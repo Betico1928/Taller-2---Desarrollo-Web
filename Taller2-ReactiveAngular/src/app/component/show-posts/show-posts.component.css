@@ -1,22 +1,35 @@
-/* Estilo para cada comentario */
-.comment-box {
-  background-color: #f5f5f5; /* Color de fondo claro para cada comentario */
-  border: 1px solid #e0e0e0; /* Borde suave alrededor del comentario */
-  padding: 15px; /* Espacio interno para el contenido del comentario */
-  margin-bottom: 10px; /* Espacio entre comentarios */
-  border-radius: 5px; /* Esquinas redondeadas para el comentario */
+/* En el archivo show-posts.component.css */
+
+/* Estilo general para cada comentario */
+.comment-container {
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilo para el nombre del usuario del comentario */
+/* Estilo para el nombre de usuario en el comentario */
 .comment-username {
-  font-weight: bold; /* Hacer el nombre de usuario en negrita */
-  color: #E57373; /* Color rojo que hemos utilizado anteriormente */
-  margin-bottom: 5px; /* Espacio entre el nombre de usuario y el cuerpo del comentario */
+  font-weight: 600;
+  color: #e74c3c; /* Rojo */
+  margin-right: 10px;
 }
 
 /* Estilo para el cuerpo del comentario */
 .comment-body {
-  font-size: 0.95rem; /* Tamaño de letra un poco más pequeño para el cuerpo del comentario */
-  color: #555; /* Color de letra oscuro pero no completamente negro */
+  font-size: 0.9rem;
+  margin-top: 5px;
 }
 
+/* Si quieres añadir algún espacio entre el nombre de usuario y el cuerpo del comentario */
+.comment-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Añadir un hover effect para resaltar un comentario cuando se pasa el mouse sobre él */
+.comment-container:hover {
+  background-color: #f0f0f0;
+}

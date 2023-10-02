@@ -1,14 +1,14 @@
-<div *ngIf="posts && posts.length > 0">
-  <div *ngFor="let post of posts">
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.body }}</p>
-    <div *ngIf="post.comments && post.comments.length > 0">
-      <h4>Comentarios:</h4>
-      <ul>
-        <li *ngFor="let comment of post.comments">
-          {{ comment.user.username }}: {{ comment.body }}
-        </li>
-      </ul>
+<div *ngFor="let post of posts">
+  <h2>{{ post.title }}</h2>
+  <p>{{ post.body }}</p>
+
+  <!-- Sección de comentarios asociados a ese post -->
+  <div *ngFor="let comment of post.comments" class="comment-container">
+    <div class="comment-content">
+          <span>
+              <span class="comment-username">{{ comment.user.username }}</span>
+              <span class="comment-body">{{ comment.body }}</span>
+          </span>
     </div>
   </div>
 </div>
