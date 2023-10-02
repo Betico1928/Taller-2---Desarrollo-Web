@@ -94,11 +94,13 @@
 
     </div>
 
-    <div *ngIf="showErrorModal" class="modal">
-      <div class="modal-content">
-        <p>{{ error }}</p>
+    <div *ngIf="showErrorModal" class="error-modal-overlay">
+      <div class="error-modal">
+        {{ error }}
+        <div class="progress-bar"></div>
       </div>
     </div>
+
   </div>
 </section>
 </body>

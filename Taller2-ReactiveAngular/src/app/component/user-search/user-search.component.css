@@ -127,9 +127,41 @@
   text-align: center;
 }
 
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.error-modal {
+  background-color: #f3f3f3; /* Color de fondo para que el modal sea claramente visible */
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%; /* puedes ajustar según prefieras */
+  max-width: 400px; /* un ancho máximo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
+.error-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con 60% de opacidad para el efecto difuminado */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;     /* Centra verticalmente */
+  z-index: 1000; /* Asegura que el overlay esté encima de otros elementos */
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px; /* El grosor de la barra */
+  background-color: darkred;
+  width: 0; /* Inicialmente, la barra estará vacía */
+  animation: fillBar 5s forwards; /* La animación durará 5s y no revertirá */
+}
+
+@keyframes fillBar {
+  to {
+    width: 100%;
+  }
+}
