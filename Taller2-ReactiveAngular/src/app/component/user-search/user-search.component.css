@@ -19,6 +19,9 @@
   display: flex;
   gap: 20px;
   margin-bottom: 30px;
+  width: 50%;
+  justify-content: center; /* Esto centrará los elementos (input y botón) dentro del contenedor */
+  /* border: 2px solid red;   Solo para diagnóstico. */
 }
 
 .form-control {
