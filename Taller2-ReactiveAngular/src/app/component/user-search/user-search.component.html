@@ -46,12 +46,58 @@
           <th>Nombre de Soltera/o</th>
           <td>{{user.maidenName}}</td>
         </tr>
-        <!-- ... Y así sucesivamente para cada atributo del modelo ... -->
+        <tr>
+          <th>Edad</th>
+          <td>{{user.age}}</td>
+        </tr>
+        <tr>
+          <th>Género</th>
+          <td>{{user.gender}}</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>{{user.email}}</td>
+        </tr>
+        <tr>
+          <th>Teléfono</th>
+          <td>{{user.phone}}</td>
+        </tr>
+        <tr>
+          <th>Nombre de usuario</th>
+          <td>{{user.username}}</td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td>{{user.password}}</td>
+        </tr>
+        <tr>
+          <th>Fecha de nacimiento</th>
+          <td>{{user.birthDate}}</td>
+        </tr>
+        <tr>
+          <th>Grupo sanguíneo</th>
+          <td>{{user.bloodGroup}}</td>
+        </tr>
+        <tr>
+          <th>Altura</th>
+          <td>{{user.height}} cm</td>
+        </tr>
+        <tr>
+          <th>Peso</th>
+          <td>{{user.weight}} kg</td>
+        </tr>
+        <tr>
+          <th>Color de ojos</th>
+          <td>{{user.eyeColor}}</td>
+        </tr>
       </table>
+
     </div>
 
-    <div *ngIf="error" class="alert alert-danger">
-      {{ error }}
+    <div *ngIf="showErrorModal" class="modal">
+      <div class="modal-content">
+        <p>{{ error }}</p>
+      </div>
     </div>
   </div>
 </section>
