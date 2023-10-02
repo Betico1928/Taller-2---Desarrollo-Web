@@ -1,35 +1,36 @@
-/* En el archivo show-posts.component.css */
+/* show-posts.component.css */
 
-/* Estilo general para cada comentario */
-.comment-container {
-  border: 1px solid #dcdcdc;
-  border-radius: 8px;
-  padding: 10px;
-  margin-top: 10px;
-  background-color: #f9f9f9;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+.post-container {
+  border: 1px solid #E57373;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+  background-color: #FFF3E0;
 }
 
-/* Estilo para el nombre de usuario en el comentario */
+.post-header {
+  margin-bottom: 20px;
+}
+
+.post-comments {
+  border-top: 1px dashed #E57373;
+  padding-top: 15px;
+}
+
+.comment-container {
+  background-color: #FFEBEE;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+  border-left: 3px solid #E57373;
+}
+
 .comment-username {
-  font-weight: 600;
-  color: #e74c3c; /* Rojo */
+  font-weight: bold;
+  color: #E57373;
   margin-right: 10px;
 }
 
-/* Estilo para el cuerpo del comentario */
 .comment-body {
-  font-size: 0.9rem;
-  margin-top: 5px;
-}
-
-/* Si quieres añadir algún espacio entre el nombre de usuario y el cuerpo del comentario */
-.comment-content {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Añadir un hover effect para resaltar un comentario cuando se pasa el mouse sobre él */
-.comment-container:hover {
-  background-color: #f0f0f0;
+  color: #555;
 }
